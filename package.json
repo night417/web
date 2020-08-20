@@ -1,0 +1,12 @@
+{
+  "name": "web-caesarpark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

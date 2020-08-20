@@ -1,0 +1,113 @@
+.mapArea{
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#map {
+  height: 500px;
+  z-index: 400;
+}
+.bookArea{
+    // height: 600px;
+    // background: #ccc;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 801;
+    pointer-events: none;
+}
+.bookBox{
+    width: 440px;
+    background: #fff;
+    padding: 120px 60px;
+    box-shadow: 0 20px 40px rgba(54, 53, 53, 0.2);
+    z-index: 801;
+    pointer-events: auto;
+}
+.bookBox h3{
+    font-family: $font-eng;
+    color: $color-main;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.bookBox label{
+    display: inline-block;
+    font-family: $font-chinese;
+    color: #5c5c5c;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-right: 10px;
+    margin-bottom: 12px;
+}
+.bookBox form>label::after{
+    content: '.';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    color: #e60012;
+    width: 3px;
+    height: 3px;
+}
+.bookBox input{
+    display: block;
+    width: 100%;
+    border: none;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 2px solid #dadada;
+    font-family: $font-eng;
+    color: #cbcbcb;
+    font-size: 14px;
+
+}
+.bookBox .text {
+    margin-bottom: 40px;
+    position: relative;
+    // margin: 0 auto 40px;
+}
+.bookBox .text label{
+    display: block;
+    position: relative;
+    padding: 0;
+}
+.bookBox .text::before{
+    content: '';
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    border-style: solid;
+    border-width: 6px 4px 0 4px;
+    border-color: $color-main transparent transparent transparent;
+}
+.bookBox .text::after{
+    content: '';
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background: $color-black;
+    position: absolute;
+    bottom:0;
+    transition: .3s;
+    margin: 0 auto;
+}
+.bookBox .show::after{
+    transform: scaleX(1);
+
+}
+.bookBox .book-btn{
+    display: block;
+    background: $color-main;
+    color: $color-white;
+    font-family: $font-eng;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 23px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+
+}

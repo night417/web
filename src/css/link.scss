@@ -1,0 +1,131 @@
+
+.test{
+  width: 200px;
+  height: 200px;
+  background: cornflowerblue;
+}
+.space{
+  width: 100%;
+  height: 140px;
+  background: transparent;
+}
+
+.linkArea {
+  display: flex;
+  flex-direction: row-reverse;
+//   align-items: center;
+  margin-bottom: 100px;
+}
+
+.linkArea > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkArea .imgBox {
+  overflow: hidden;
+}
+.linkArea .imgBox a {
+  display: block;
+}
+.linkArea .imgBox img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+.linkArea .imgBox:hover img{
+  transform: scale(1.1);
+  opacity: .5;
+  transition: transform 7s, opacity .8s ease-in-out
+}
+
+.linkArea .txt {
+  h3 {
+    margin-bottom: 20px;
+  }
+  h3 a {
+    font-family: $font-noto;
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    max-height: 75px;
+    overflow-wrap: break-word;
+    font-family: $font-chinese;
+  }
+  > a {
+    font-family: $font-chinese;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+  }
+}
+.link-leftBox .txt {
+    padding: 80px 70px 120px 70px;
+
+  h3 a {
+    color: $color-white;
+  }
+  > a {
+    color: $color-white;
+  }
+}
+.link-leftBox .ring{
+    position: absolute;
+    bottom: -99px;
+}
+.link-rightBox .txt{
+
+    h3 a {
+        color: $color-black;
+      }
+      > a {
+        color: $color-main;
+        transition: .4s;
+        &:hover{
+            color: #cac0b0;
+        }
+      }
+    
+}
+
+.linkArea .link-leftBox .txt {
+  width: calc(100% + 100px);
+  background: #af967d;
+  color: $color-white;
+}
+
+.linkArea .link-rightBox .txt {
+  background: #f7f5f3;
+  padding: 80px 70px;
+}
+
+
+.link-txt{
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    left: 600px;
+    bottom: -220px;
+    width: 50%;
+    z-index: 18;
+}
+.link-txt .left{
+    font-size: 300px;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: -260px;
+}
+.link-txt .right{
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-left: 108px;
+}

@@ -1,0 +1,36 @@
+$color-main: #bca480;
+$color-black: #131311;
+$color-white: #fff;
+$font-noto: "Noto Sans TC", sans-serif;
+$font-chinese: "微軟正黑體";
+$font-eng: sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  overflow-x: hidden;
+
+}
+body.noScroll{
+  overflow-y: hidden;
+}
+.wrap {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+#wrapper{
+    position: relative;
+}

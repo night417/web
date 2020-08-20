@@ -1,0 +1,87 @@
+#ytbg-wrapper {
+  position: relative;
+  z-index: 0;
+}
+#ytbg-container {
+  height: 100vh;
+}
+
+#ytbg-title {
+  color: $color-white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+
+  font-family: $font-eng;
+  font-weight: 300;
+  font-size: 70px;
+}
+
+#ytbg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 980px;
+  height: 100%;
+  background: url("../images/cA.png") no-repeat left top {
+    size: cover;
+  }
+}
+
+.gif-static {
+  background: url("../images/gif_static.png") no-repeat 60px bottom;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  div {
+    position: absolute;
+    img {
+      height: 55px;
+    }
+  }
+  @keyframes walk {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  @keyframes walk2 {
+    0% {
+      right: 100%;
+    }
+    100% {
+      right: 0%;
+    }
+  }
+
+  .service01 {
+    animation: walk2 100s -28s infinite linear;
+  }
+  .service02 {
+    animation: walk 100s -70s infinite linear;
+  }
+  .service03 {
+    left: 7%;
+    bottom: -1px;
+  }
+  .service04 {
+    animation: walk2 100s -64s infinite linear;
+  }
+  .traveler01 {
+    animation: walk2 100s -7s infinite linear;
+  }
+  .traveler02 {
+    animation: walk 100s -50s infinite linear;
+  }
+  .traveler03 {
+    animation: walk 100s -20s infinite linear;
+  }
+  .traveler04 {
+    animation: walk 100s -35s infinite linear;
+  }
+}

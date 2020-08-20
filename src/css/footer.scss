@@ -1,0 +1,22 @@
+footer {
+    padding: 50px 0 90px;
+    display: flex;
+    .footer-leftBox, .footer-rightBox{
+      width: 600px;
+    }
+    .footer-rightBox img{
+      float: right;
+      margin-top: 20px;
+    }
+  .social,
+  .copyrightBox {
+    opacity: 1;
+    visibility: 1;
+    h5{
+      margin-bottom: 10px;
+    }
+  }
+  .social{
+      text-align: left;
+  }
+}

@@ -1,0 +1,206 @@
+.featureArea {
+  padding: 150px 0 0;
+  margin-bottom: 150px;
+}
+.featureArea .img1 {
+  width: 885px;
+  height: 460px;
+}
+.featureArea .img2 {
+  width: 570px;
+  height: 296px;
+  position: absolute;
+  top: 315px;
+  right: 0;
+}
+.featureArea .img3 {
+  width: 250px;
+  height: 130px;
+  position: absolute;
+  top: 155px;
+  right: 30px;
+}
+.featureList .item {
+  overflow: hidden;
+}
+.featureArea .item div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.featureArea .item div.animation2 img{
+  width: 0%;
+}
+
+.featureList .item .animation2:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: $color-main;
+  animation: lineDown 0.4s ease-out, lineOpen 0.4s 0.4s forwards;
+  top: 0;
+  left: 0;
+}
+@keyframes lineDown {
+  0% {
+    width: 4px;
+    height: 0%;
+  }
+  100% {
+    width: 4px;
+    height: 100%;
+  }
+}
+@keyframes lineOpen {
+  0% {
+    width: 4px;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes lineClose {
+  100% {
+    width: 0%;
+    float: right;
+  }
+}
+
+.featureList .item .animation1:after {
+  content: "";
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $color-white;
+  z-index: 3;
+  animation: linebye 0.5s 0.1s ease-out forwards;
+}
+@keyframes linebye {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.featureList .animation2 {
+  overflow: hidden;
+  transition: all .5s, box-shadow 0.5s 1.5s ;
+  box-shadow: 0 5px 30px rgba(54, 53, 53, 0.35);
+}
+.featureArea .animation1 {
+  box-shadow: none;
+  transition: 0s;
+}
+.featureArea .animation2 img {
+  animation: imghover 0.5s 0.8s ease-out forwards,
+    imgmove 1s 0.9s ease-out forwards;
+}
+@keyframes imghover {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes imgmove {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.featureList .item .txt {
+  width: 510px;
+  overflow: hidden;
+  padding: 45px 0 0 60px;
+  transition: 1s;
+  h3 {
+    margin-bottom: 10px;
+    a {
+      color: $color-black;
+      font-family: $font-noto;
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+  p {
+    font-family: $font-chinese;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    overflow-wrap: break-word;
+    letter-spacing: 1px;
+    color: #5c5c5c;
+  }
+  > a {
+    display: inline-block;
+    color: $color-main;
+    font-family: $font-chinese;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  > a::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: $color-main;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: 5;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+  }
+
+  > a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $color-main;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    z-index: 5;
+    transition: 0.3s;
+  }
+  > a:hover::after {
+    width: 0;
+  }
+  > a:hover::before {
+    width: 100%;
+  }
+}
+.featureArea .change .txt {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.featureArea .dotBox {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  width: 570px;
+  text-align: center;
+}
+
+.dotBox a {
+  display: inline-block;
+  width: 36px;
+  height: 4px;
+  background: #ccc;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.dotBox .current {
+  background: $color-main;
+}

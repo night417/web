@@ -1,0 +1,194 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 801;
+  transition: 0.5s ease;
+  nav {
+    // width: 100%;
+    padding: 0 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .rightBox {
+      display: flex;
+      margin-top: 45px;
+      transition: 0.5s ease;
+    }
+  }
+}
+
+.logo {
+  margin: 45px 0 0 0;
+  position: relative;
+  width: 210px;
+  transition: 0.5s ease;
+  a {
+    display: block;
+    height: 50px;
+    background: url(../images/logo_white.png) no-repeat;
+    background-size: contain;
+  }
+}
+.headerList {
+  padding: 10px 15px 0 0;
+  transition: 0.5s ease;
+  display: none;
+  > a {
+    display: inline-block;
+    padding: 0;
+    font-size: 15px;
+    font-family: $font-chinese;
+    color: #5c5c5c;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+    opacity: 0;
+    &:hover {
+      color: $color-main;
+    }
+  }
+}
+.headerBookingBox {
+  display: inline-block;
+  height: 50px;
+  > a {
+    color: $color-main;
+    background-color: $color-white;
+    display: inline-block;
+    margin-right: 40px;
+    padding: 15px 70px;
+    clip-path: polygon(0 0, 100% 0%, 91.5% 100%, 0% 100%);
+    font-size: 13px;
+    font-family: $font-noto;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-white;
+    }
+  }
+  ul {
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: 0.5s ease;
+    opacity: 0;
+  }
+  ul a {
+    display: inline-block;
+    color: $color-black;
+    background-color: rgba($color-white, 0.7);
+    padding: 10px;
+    width: calc(100% - 65px);
+    text-align: center;
+    font-size: 13px;
+    font-family: $font-noto;
+    &:hover {
+      transition: 0.5s ease;
+      background-color: $color-main;
+      color: $color-white;
+    }
+  }
+  .show {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.languageBox {
+  margin: 0 70px 0 20px;
+  display: inline-block;
+  height: 50px;
+  span {
+    padding: 15px 50px;
+    color: $color-main;
+    background: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: $font-chinese;
+    font-size: 13px;
+    transition: 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      color: $color-black;
+    }
+    i {
+      margin-left: 5px;
+      font-size: 12px;
+    }
+  }
+  ul {
+    width: 100%;
+    visibility: hidden;
+    box-shadow: 0px 3px 10px rgba($color-black, 0.1);
+    transform: translateY(-8px);
+    transition: 0.5s ease;
+    opacity: 0;
+  }
+  ul a {
+    display: inline-block;
+    color: $color-black;
+    background: $color-white;
+    padding: 15px 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-family: $font-noto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+  .show {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.change {
+  background: $color-white;
+  box-shadow: 0px 5px 50px rgba(54, 53, 53, 0.1);
+  z-index: 802;
+
+  .logo {
+    margin: 10px 0;
+    a {
+      background: url("../images/logo.png") no-repeat;
+      background-size: contain;
+    }
+  }
+  .rightBox {
+    margin: 15px 0;
+  }
+  .headerList {
+    display: block;
+    > a {
+      padding: 0 10px;
+      opacity: 1;
+    }
+  }
+  .headerBookingBox {
+    height: 45px;
+  }
+  .headerBookingBox > a {
+    clip-path: none;
+    color: $color-white;
+    background: $color-main;
+    padding: 12px 40px;
+    margin: 0;
+  }
+  .headerBookingBox ul li a {
+    width: 100%;
+  }
+  .languageBox {
+    height: 45px;
+    margin: 0 100px 0 20px;
+    > span {
+      padding: 12px 30px;
+    }
+  }
+}
